@@ -6,7 +6,7 @@ class DiceRollCommand extends commando.Command {
             name: 'roll',
             group: 'random',
             memberName: 'roll',
-            description: 'Rolls a die'
+            description: 'Generates two teams of 5 or less people for R6S customs.'
         });
     }
 
@@ -50,24 +50,24 @@ class DiceRollCommand extends commando.Command {
                 var roll = Math.floor(Math.random() * 2);
                 if(roll == 0) {
                     if (blueCount != 0) {
-                        message.channel.sendMessage(i+1 + '. Blue');
+                        message.channel.send(i+1 + '. Blue');
                         blueCount--;
-                        //message.channel.sendMessage('Blue Count: ' + blueCount);
+                        //message.channel.send('Blue Count: ' + blueCount);
                     } else{
-                        message.channel.sendMessage(i+1 + '. Orange');
+                        message.channel.send(i+1 + '. Orange');
                         orangeCount--;
-                        //message.channel.sendMessage('Orange Count: ' + orangeCount);
+                        //message.channel.send('Orange Count: ' + orangeCount);
                     }
                 
                } else {
                     if(orangeCount != 0) {
-                        message.channel.sendMessage(i+1 + '. Orange');
+                        message.channel.send(i+1 + '. Orange');
                         orangeCount--;
-                        //message.channel.sendMessage('Orange Count: ' + orangeCount);
+                        //message.channel.send('Orange Count: ' + orangeCount);
                     } else {
-                        message.channel.sendMessage(i+1 + '. Blue');
+                        message.channel.send(i+1 + '. Blue');
                         blueCount--;
-                        //message.channel.sendMessage('Blue Count: ' + blueCount);
+                        //message.channel.send('Blue Count: ' + blueCount);
                     }
                 
                 }

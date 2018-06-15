@@ -6,15 +6,15 @@ class StratRouletteCommand extends commando.Command {
             name: 'strat',
             group: 'random',
             memberName: 'strat',
-            description: 'Rolls a strat'
+            description: 'Randomly generates a strat. Basically strat roulette.'
         });
     }
 
     async run(message, args) {
 
-        //First number is the GAMEMODE (0-Bomb, 1-Hostage, 2-Secure)
-        //Second number is the SIDE (0-Attack, 1-Defend)
-        //Third number is the STRAT NO.
+        //First alphabet is the GAMEMODE (b-Bomb, h-Hostage, s-Secure)
+        //First number is the SIDE (0-Attack, 1-Defend)
+        //Second number is the STRAT NO.
 
         //BOMB,ATTACK
         const b00 = "All GSG-9 recruit with shotgun and run like hell";
